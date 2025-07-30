@@ -1,6 +1,6 @@
 {
   "name": "@the7ofdiamonds/locations",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An NPM package used to display Map, coordinates and directions.",
   "author": "@the7ofdiamonds",
   "license": "ISC",
@@ -12,17 +12,14 @@
     "url": "https://github.com/the7ofdiamonds/locations/issues"
   },
   "homepage": "https://github.com/the7ofdiamonds/locations#readme",
-  "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/src/index.cjs",
-  "module": "./dist/src/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/src/index.js",
-      "require": "./dist/src/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "types": "./dist/types/index.d.ts"
     }
   },
