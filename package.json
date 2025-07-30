@@ -1,0 +1,96 @@
+{
+  "name": "@the7ofdiamonds/locations",
+  "version": "0.0.1",
+  "description": "An NPM package used to display Map, coordinates and directions.",
+  "main": "index.js",
+  "author": "@the7ofdiamonds",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jamelclyons/locations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamelclyons/locations/issues"
+  },
+  "homepage": "https://github.com/jamelclyons/locations#readme",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "require": "./dist/src/index.cjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "tsc:dev": "tsc --watch",
+    "sync": "browser-sync start --config browsersync.config.js",
+    "vite": "vite -c vite.config.ts",
+    "build": "npm-run-all gulp:build vite:build",
+    "preview": "vite preview --port 8080",
+    "gulp": "gulp",
+    "vite:build": "vite build",
+    "gulp:build": "gulp build",
+    "update-dev": "git push locations development",
+    "update-prod": "git push locations",
+    "refactor": "./refactor.sh && npm run update-prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@reach/combobox": "^0.18.0",
+    "@react-google-maps/api": "^2.7.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "browser-sync": "^3.0.3",
+    "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "del": "^8.0.0",
+    "fs": "^0.0.1-security",
+    "glob": "^11.0.1",
+    "marked": "^15.0.5",
+    "moment": "^2.29.4",
+    "node": "^23.8.0",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^8.0.0",
+    "react-router-dom": "^6.14.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "source-map-js": "^1.0.2",
+    "tslib": "^2.8.1",
+    "use-places-autocomplete": "^1.11.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/marked": "^5.0.2",
+    "@types/node": "^22.10.7",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-hash-filename": "^4.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.89.2",
+    "typescript": "^5.7.3",
+    "vite": "^5.0.10",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  }
+}
