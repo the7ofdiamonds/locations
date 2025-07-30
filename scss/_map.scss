@@ -1,0 +1,11 @@
+.card.map-card {
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 0.5em;
+
+  iframe {
+    border-radius: 0.5em;
+  }
+}
