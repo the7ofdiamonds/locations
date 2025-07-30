@@ -17,7 +17,7 @@ export const Location: React.FC = () => {
   return <Map />;
 }
 
-function Map() {
+export const Map: React.FC = () => {
   const center = useMemo(() => ({ lat: 43.45, lng: -80.49 }), []);
 
   const [selected, setSelected] = useState<LatLon | null>(null);
