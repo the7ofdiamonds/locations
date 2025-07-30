@@ -1,21 +1,18 @@
 {
   "name": "@the7ofdiamonds/locations",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "An NPM package used to display Map, coordinates and directions.",
-  "main": "index.js",
   "author": "@the7ofdiamonds",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/jamelclyons/locations.git"
+    "url": "git+ssh://git@github.com/the7ofdiamonds/locations.git"
   },
   "bugs": {
-    "url": "https://github.com/jamelclyons/locations/issues"
+    "url": "https://github.com/the7ofdiamonds/locations/issues"
   },
-  "homepage": "https://github.com/jamelclyons/locations#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "homepage": "https://github.com/the7ofdiamonds/locations#readme",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/src/index.js",
@@ -23,9 +20,13 @@
       "types": "./dist/types/index.d.ts"
     }
   },
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite build --watch",
     "tsc:dev": "tsc --watch",
@@ -89,7 +90,7 @@
     "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^5.1.4"
   },
-   "peerDependencies": {
+  "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^8.0.0",

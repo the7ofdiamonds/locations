@@ -1,4 +1,4 @@
- export * from './controllers/locationSlice';
+export * from './controllers/locationSlice';
 
 export * from './views/Location';
 export * from './views/Locations';
