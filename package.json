@@ -1,6 +1,6 @@
 {
   "name": "@the7ofdiamonds/locations",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An NPM package used to display Map, coordinates and directions.",
   "main": "index.js",
   "author": "@the7ofdiamonds",
@@ -13,6 +13,9 @@
     "url": "https://github.com/jamelclyons/locations/issues"
   },
   "homepage": "https://github.com/jamelclyons/locations#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     ".": {
       "import": "./dist/src/index.js",
@@ -26,13 +29,9 @@
   "scripts": {
     "dev": "vite build --watch",
     "tsc:dev": "tsc --watch",
-    "sync": "browser-sync start --config browsersync.config.js",
     "vite": "vite -c vite.config.ts",
-    "build": "npm-run-all gulp:build vite:build",
+    "build": "vite build",
     "preview": "vite preview --port 8080",
-    "gulp": "gulp",
-    "vite:build": "vite build",
-    "gulp:build": "gulp build",
     "update-dev": "git push locations development",
     "update-prod": "git push locations",
     "refactor": "./refactor.sh && npm run update-prod",
@@ -89,6 +88,12 @@
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+   "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.0",
+    "react-router-dom": "^6.14.2"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
