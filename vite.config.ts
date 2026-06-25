@@ -10,12 +10,11 @@ import rollupOptions from './rollup.config';
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   plugins: [
-    cssInjectedByJsPlugin(),
     dts({ insertTypesEntry: true, outDir: 'dist/types' }),
   ],
   build: {
     cssCodeSplit: true,
-    sourcemap: true,
+    sourcemap: false,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'Locations',

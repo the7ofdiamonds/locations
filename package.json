@@ -4,6 +4,22 @@
   "description": "An NPM package used to display Map, coordinates and directions.",
   "author": "@the7ofdiamonds",
   "license": "ISC",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./scss": {
+      "sass": "./scss/index.scss",
+      "default": "./scss/index.scss"
+    }
+  },
+  "files": [
+    "dist",
+    "scss"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/the7ofdiamonds/locations.git"
@@ -12,17 +28,6 @@
     "url": "https://github.com/the7ofdiamonds/locations/issues"
   },
   "homepage": "https://github.com/the7ofdiamonds/locations#readme",
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/types/index.d.ts"
-    }
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -32,10 +37,12 @@
     "vite": "vite -c vite.config.ts",
     "build": "vite build",
     "preview": "vite preview --port 8080",
-    "update-dev": "git push locations development",
-    "update-prod": "git push locations",
-    "refactor": "./refactor.sh && npm run update-prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update-prod": "git push git@github.com:the7ofdiamonds/locations.git",
+    "update-dev": "git push ssh://git@gitlab.jclyonsenterprises.com:2424/seven-tech/packages/javascript/locations.git",
+    "workflow": "bash ../workflow.sh",
+    "refactor": "npm run workflow refactor",
+    "test": "echo \"No test specified\" && exit 0",
+    "clean": "rimraf dist node_modules"
   },
   "dependencies": {
     "@reach/combobox": "^0.18.0",
@@ -51,7 +58,6 @@
     "glob": "^11.0.1",
     "marked": "^15.0.5",
     "moment": "^2.29.4",
-    "node": "^23.8.0",
     "path": "^0.12.7",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "source-map-js": "^1.0.2",
@@ -98,5 +104,8 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  },
+  "overrides": {
+    "esbuild": "^0.21.0"
   }
 }

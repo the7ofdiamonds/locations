@@ -1,29 +1,15 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "esnext",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "declaration": true,
-    "emitDeclarationOnly": false,
     "outDir": "dist",
     "declarationDir": "dist/types",
-    "sourceMap": true,
-    "types": ["vite/client", "react", "react-dom"],
-    "baseUrl": ".",
+    "rootDir": "src",
+    /* Overwrite these to ensure local node_modules are found */
+    "baseUrl": ".", 
     "paths": {
-      "@/*": ["src/*"]
-    },
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "strict": true,
-    "allowSyntheticDefaultImports": true
+      "*": ["./node_modules/*", "../../node_modules/*"]
+    }
   },
-  "include": ["src", "vite-env.d.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }
