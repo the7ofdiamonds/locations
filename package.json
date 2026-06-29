@@ -4,6 +4,9 @@
   "description": "An NPM package used to display Map, coordinates and directions.",
   "author": "@the7ofdiamonds",
   "license": "ISC",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
