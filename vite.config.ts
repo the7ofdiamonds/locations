@@ -5,8 +5,6 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 import path from 'path';
 
-import rollupOptions from './rollup.config';
-
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   plugins: [
@@ -21,7 +19,6 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`
     },
-    rollupOptions: rollupOptions,
     minify: false,
   },
   resolve: {
