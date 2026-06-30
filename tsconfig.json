@@ -23,11 +23,9 @@
     "emitDeclarationOnly": false,
     "outDir": "dist",
     "declarationDir": "dist/types",
-    "rootDir": "src"
+    "rootDir": "."
   },
-  "include": [
-    "src"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
   "exclude": [
     "node_modules",
     "dist"
