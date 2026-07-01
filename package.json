@@ -1,6 +1,6 @@
 {
   "name": "@the7ofdiamonds/locations",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "An NPM package used to display Map, coordinates and directions.",
   "author": "@the7ofdiamonds",
   "license": "ISC",
