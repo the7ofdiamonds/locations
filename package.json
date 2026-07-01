@@ -50,7 +50,7 @@
   "dependencies": {
     "@the7ofdiamonds/types": "latest",
     "@the7ofdiamonds/ui-ux": "latest",
-    "@reach/combobox": "^1.0.2",
+    "@reach/combobox": "^0.18.0",
     "@reach/observe-rect": "^1.2.0",
     "@reach/popover": "^0.18.0",
     "@reach/rect": "^0.18.0"
