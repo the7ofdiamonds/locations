@@ -1,6 +1,5 @@
 dist
 /node_modules
-*-lock.json
 
 .env
 .env.local
