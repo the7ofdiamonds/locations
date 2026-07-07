@@ -48,12 +48,9 @@
     "clean": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@the7ofdiamonds/types": "latest",
-    "@the7ofdiamonds/ui-ux": "latest",
     "@radix-ui/react-popover": "latest"
   },
   "devDependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
@@ -66,6 +63,9 @@
   },
   "peerDependencies": {
     "@react-google-maps/api": "^2.19.2",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@the7ofdiamonds/types": "latest",
+    "@the7ofdiamonds/ui-ux": "latest",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^8.1.1",
