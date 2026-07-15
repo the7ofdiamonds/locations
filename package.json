@@ -44,14 +44,12 @@
     "preview": "vite preview --port 8080",
     "update-prod": "git push git@github.com:the7ofdiamonds/locations.git",
     "update-dev": "git push ssh://git@gitlab.jclyonsenterprises.com:2424/seven-tech/packages/javascript/locations.git",
-    "workflow": "bash ../workflow.sh",
-    "refactor": "npm run workflow refactor",
+    "workflow": "bash update_npm_workflow.sh",
+    "refactor": "bash update_npm_workflow.sh refactor",
     "test": "echo \"No test specified\" && exit 0",
     "clean": "rimraf dist node_modules"
   },
-  "dependencies": {
-    "@radix-ui/react-popover": "latest"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
@@ -65,8 +63,9 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
+    "@radix-ui/react-popover": "1.1.19",
     "@react-google-maps/api": "^2.19.2",
-    "@reduxjs/toolkit": "^1.9.5",
+    "@reduxjs/toolkit": "^2.12.0",
     "@the7ofdiamonds/types": "latest",
     "@the7ofdiamonds/ui-ux": "latest",
     "react": "^18.3.1",
