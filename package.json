@@ -1,6 +1,6 @@
 {
   "name": "@the7ofdiamonds/locations",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "An NPM package used to display Map, coordinates and directions.",
   "author": "@the7ofdiamonds",
   "license": "ISC",
@@ -51,7 +51,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-        "@reduxjs/toolkit": "^2.12.0",
+    "@reduxjs/toolkit": "^2.12.0",
     "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
